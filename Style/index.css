@@ -33,6 +33,7 @@ body .menu {
   top: 60px;
   z-index: 1;
   box-shadow: 2px 0px 4px #B9B9B9;
+  user-select: none;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -52,24 +53,45 @@ body .menu .DropMenu {
   display: flex;
   flex-direction: column;
   position: relative;
+  cursor: pointer;
 }
-body .menu .DropMenu .Menu {
+body .menu .DropMenu .BtnMenu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px 20px;
 }
-body .menu .DropMenu .Menu span {
+body .menu .DropMenu .BtnMenu span {
   display: flex;
   justify-content: space-between;
   font-size: large;
   font-weight: 900;
 }
-body .menu .DropMenu .DropContent {
-  display: flex;
+body .menu .DropMenu .BtnMenu .Icon {
+  transition: 0.2s ease all;
+}
+body .menu .DropMenu .Open .Icon {
+  transition: 0.2s ease all;
+  transform: rotate(-90deg);
+}
+body .menu .DropMenu .BtnMenu:hover {
+  background: #B9B9B9;
+}
+body .menu .DropMenu .DropContent-close {
+  display: none;
   flex-direction: column;
 }
-body .menu .DropMenu .DropContent span {
+body .menu .DropMenu .DropContent-close span {
+  padding: 8px 30px;
+  width: 270;
+}
+body .menu .DropMenu .DropContent-open {
+  display: flex;
+  flex-direction: column;
+  height: 0px;
+  overflow: hidden;
+}
+body .menu .DropMenu .DropContent-open span {
   padding: 8px 30px;
   width: 270;
 }
