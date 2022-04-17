@@ -1,0 +1,98 @@
+const BtnMenu = document.querySelectorAll('.BtnMenu');
+const Arrow = document.querySelector('.Icon');
+
+// Funcion de la interacion del menu
+BtnMenu.forEach(BtnMenu => {
+    BtnMenu.addEventListener('click', ()=>{
+        
+        BtnMenu.classList.toggle('Open');
+
+        let height = 0;
+        let Menu = BtnMenu.nextElementSibling;
+
+        if(Menu.clientHeight == "0"){
+            height = Menu.scrollHeight;
+        }
+        Menu.style.height = `${height}px`;
+
+    });
+})
+// END
+
+function simplificar(numerador, denominador){
+    let listPrimos = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499, 503, 509, 521, 523, 541, 547, 557, 563, 569, 571, 577, 587, 593, 599, 601, 607, 613, 617, 619, 631, 641, 643, 647, 653, 659, 661, 673, 677, 683, 691, 701, 709, 719, 727, 733, 739, 743, 751, 757, 761, 769, 773, 787, 797, 809, 811, 821, 823, 827, 829, 839, 853, 857, 859, 863, 877, 881, 883, 887, 907, 911, 919, 929, 937, 941, 947, 953, 967, 971, 977, 983, 991, 997];
+    // Array de los numeradores, denominadores simplifiados y numeros primos usados.
+    let listNumeradores = [];
+    let listDenominadores = [];
+    let listPrimosUsados = [];
+    let Nnumerador = numerador;
+    let Ndenominador = denominador;
+    let nPrimosUsado;
+
+    let nPrimos = 0;
+    // Esta variable sirve para verificar que la fraccion haya llegado a su minimo simplificado.
+    let verificador = true;
+    while (verificador){
+        if ((Nnumerador % listPrimos[nPrimos] == 0 & Ndenominador % listPrimos[nPrimos] == 0)){
+            Nnumerador = Nnumerador / listPrimos[nPrimos];
+            Ndenominador = Ndenominador / listPrimos[nPrimos];
+            nPrimosUsado = listPrimos[nPrimos];
+
+            listNumeradores.push(Nnumerador);
+            listDenominadores.push(Ndenominador);
+            listPrimosUsados.push(nPrimosUsado);
+        }
+        else{
+            if (listPrimos[nPrimos] > Nnumerador){
+                verificador = false;
+                return {Nnumerador, Ndenominador, listNumeradores, listDenominadores, nPrimosUsados: listPrimosUsados}
+            }
+            else {
+                nPrimos += 1;
+            }
+        }
+    }
+
+}
+console.log(simplificar(36, 72));
+
+
+// let nPrimos = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499, 503, 509, 521, 523, 541, 547, 557, 563, 569, 571, 577, 587, 593, 599, 601, 607, 613, 617, 619, 631, 641, 643, 647, 653, 659, 661, 673, 677, 683, 691, 701, 709, 719, 727, 733, 739, 743, 751, 757, 761, 769, 773, 787, 797, 809, 811, 821, 823, 827, 829, 839, 853, 857, 859, 863, 877, 881, 883, 887, 907, 911, 919, 929, 937, 941, 947, 953, 967, 971, 977, 983, 991, 997];
+// let numeradores = [];
+// let denominadores = [];
+
+// let numerador = 36;
+// let denominador = 72;
+
+// let i = 0;
+// let verificador = true;
+// while (verificador){
+//     if ((numerador % nPrimos[i] == 0 & denominador % nPrimos[i] == 0)){
+//         numerador = numerador / nPrimos[i];
+//         denominador = denominador / nPrimos[i];
+
+//         numeradores.push(numerador);
+//         denominadores.push(denominador);
+
+//         // console.log(numerador);
+//         // console.log(denominador);
+//         // console.log('Primo ' + i);
+        
+
+//     }
+//     else{
+//         if (nPrimos[i] > numerador){
+//             verificador = false;
+//             // console.log(numerador);
+//             // console.log(denominador);
+//             // console.log('Primo es mayor ' + i);
+//             //Resualtado Final
+//         }
+//         else {
+//             i += 1;
+//         }
+//     }
+// }
+
+// numeradores.forEach(element => console.log(element));
+// denominadores.forEach(element => console.log(element));
