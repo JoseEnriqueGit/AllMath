@@ -38,6 +38,50 @@
         </div>
     </aside>
 
+    <main class="Panel">
+        <div class="Tarjeta">
+            <span class="Tarjeta-title">FRACCION</span>
+            <div class="PanelOperacion">
+                <div class="PartesFraccion">
+                    <span>NUMERADOR</span>
+                    <span>DENOMINADOR</span>
+                </div>
+                <div class="Fraccion">
+                    <div class="DivInput"><input type="number" pattern="[\d]"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div class="FraccionLine"></div>
+                    <div class="DivInput"><input type="number" pattern="[\d]"><i class="fas fa-exclamation-triangle"></i></div>
+                    
+                </div>
+                <span class="SignoIqual">=</span>
+                <div class="FraccionResult">
+                    <input class="NumeradorResult" disabled type="number" pattern="[\d]">
+                    <div class="FraccionLine"></div>
+                    <input class="DenominadorResult" disabled type="number" pattern="[\d]">
+                </div>
+            </div>
+            <div class="DetallesOperacion">
+                <div class="PartesFraccionDetalles">
+                    <span>NUMERADOR</span>
+                    <span>DENOMINADOR</span>
+                    <span>NUMERO PRIMO</span>
+                </div>
+                <div class="DetallesFraccionResult">
+                    <div class="Fracciones">
+                        <div class="Fraccion">
+                            <div class="Numerador">5</div>
+                            <div class="Line"></div>
+                            <div class="Denominador">5</div>
+                            <span>5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button>RESOLVER</button>
+
+        </div>
+    </main>
+
     <!-- JS -->
     <script type="text/javascript" src="/Scripts/interactive.js"></script>
     <script src="https://kit.fontawesome.com/0d9a9d95d8.js" crossorigin="anonymous"></script>

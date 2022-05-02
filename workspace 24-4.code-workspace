@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\Quinto Cuatrimestre\\Casos"
+		},
+		{
+			"path": "..\\HTML CSS"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "AllMath"
+	}
+}
