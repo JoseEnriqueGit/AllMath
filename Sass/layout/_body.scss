@@ -194,6 +194,8 @@ body{
                         i{
                             margin: 0px 0px 0px 10px;
                             width: 5px;
+                            position: relative;
+                            // width: 100px;
                         }
                     }
 
@@ -221,10 +223,7 @@ body{
                         height: 40px;
                         margin: 10px 0px;
 
-                        border: 0;
-                        outline: none;
                         border-radius: 10px;
-                        box-shadow: 0px 0px 0px 0px rgba($color: #f14242, $alpha: 0);
                         transition: 0.2s ease all;
 
                         font-size: xx-large;
@@ -233,9 +232,31 @@ body{
 
                         width: 100px;
                         background: #FFFFFF;
+                        user-select: none;
                     }
                 }
             }
+
+            .DivAlert{
+                display: none;
+                width: 100%;
+                margin: 10px 0px;
+
+                i{
+                    margin: 0px 5px;
+                }
+
+                .Alert{
+                    width: 100%;
+                    margin: 0px 5px;
+                    padding: 5px;
+                    background: $YW;
+                    border-radius: 10px;
+                    font-size: small;
+                    font-weight: bolder;
+                }
+            }
+
             .DetallesOperacion{
                 height: 100%;
                 width: 100%;
@@ -271,12 +292,14 @@ body{
                         flex-direction: row;
                         // width: 100%;
 
-                        .Fraccion{
+                        .DetallesFraccion{
                             display: flex;
+
+                            align-items: center;
                             flex-direction: column;
                             margin: 10px;
         
-                            .Numerador, .Denominador{
+                            .DetallesNumerador, .DetallesDenominador{
                                 width: 50px;
                                 height: 22px;
                                 background: #FFFFFF;
