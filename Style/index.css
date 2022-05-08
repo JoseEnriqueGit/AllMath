@@ -15,6 +15,260 @@ nav {
   box-shadow: 0px 3px 2px #B9B9B9;
 }
 
+.menu {
+  background: #E5E5E5;
+  height: 100vh;
+  width: 300px;
+  position: fixed;
+  top: 60px;
+  z-index: 1;
+  box-shadow: 2px 0px 4px #B9B9B9;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.menu .title {
+  margin: 20px 0px;
+  font-size: x-large;
+  font-weight: center;
+}
+.menu .line {
+  width: 100%;
+  height: 3px;
+  background: #B9B9B9;
+}
+.menu .DropMenu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+}
+.menu .DropMenu .BtnMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+}
+.menu .DropMenu .BtnMenu span {
+  display: flex;
+  justify-content: space-between;
+  font-size: large;
+  font-weight: 900;
+}
+.menu .DropMenu .BtnMenu .Icon {
+  transition: 0.2s ease all;
+}
+.menu .DropMenu .Open .Icon {
+  transition: 0.2s ease all;
+  transform: rotate(-90deg);
+}
+.menu .DropMenu .BtnMenu:hover {
+  background: #B9B9B9;
+}
+.menu .DropMenu .DropContent-close {
+  display: none;
+  flex-direction: column;
+}
+.menu .DropMenu .DropContent-close span {
+  padding: 8px 30px;
+  width: 270;
+}
+.menu .DropMenu .DropContent-open {
+  display: flex;
+  flex-direction: column;
+  height: 0px;
+  overflow: hidden;
+}
+.menu .DropMenu .DropContent-open span {
+  padding: 8px 30px;
+  width: 270;
+}
+
+.Tarjeta {
+  position: relative;
+  top: 132px;
+  left: 400px;
+  width: 600px;
+  background: #E5E5E5;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Tarjeta .Tarjeta-title {
+  font-weight: bolder;
+  margin: 10px 0px;
+}
+.Tarjeta .PanelOperacion {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.Tarjeta .PanelOperacion .PartesFraccion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Tarjeta .PanelOperacion .PartesFraccion span {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  margin: 0px 20px;
+  font-weight: bolder;
+  font-style: italic;
+}
+.Tarjeta .PanelOperacion .FraccionLine {
+  height: 2px;
+  width: 100%;
+  background: black;
+}
+.Tarjeta .PanelOperacion .Fraccion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Tarjeta .PanelOperacion .Fraccion .DivInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Tarjeta .PanelOperacion .Fraccion .DivInput input {
+  height: 40px;
+  margin: 10px 0px;
+  border: 0;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px 0px rgba(241, 66, 66, 0);
+  transition: 0.2s ease all;
+  font-size: xx-large;
+  font-weight: bolder;
+  text-align: center;
+  width: 100px;
+}
+.Tarjeta .PanelOperacion .Fraccion .DivInput input:focus {
+  box-shadow: 0px 0px 2px 4px #f14242;
+  transition: 0.2s ease all;
+}
+.Tarjeta .PanelOperacion .Fraccion .DivInput i {
+  margin: 0px 0px 0px 10px;
+  width: 5px;
+  position: relative;
+}
+.Tarjeta .PanelOperacion .SignoIqual {
+  font-weight: bolder;
+  font-size: xx-large;
+  display: flex;
+  text-align: center;
+  margin: 0px 30px;
+}
+.Tarjeta .PanelOperacion .FraccionResult {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Tarjeta .PanelOperacion .FraccionResult .NumeradorResult, .Tarjeta .PanelOperacion .FraccionResult .DenominadorResult {
+  height: 40px;
+  margin: 10px 0px;
+  border-radius: 10px;
+  transition: 0.2s ease all;
+  font-size: xx-large;
+  font-weight: bolder;
+  text-align: center;
+  width: 100px;
+  background: #FFFFFF;
+  user-select: none;
+}
+.Tarjeta .DivAlert {
+  display: none;
+  width: 100%;
+  margin: 10px 0px;
+}
+.Tarjeta .DivAlert i {
+  margin: 0px 5px;
+}
+.Tarjeta .DivAlert .Alert {
+  width: 100%;
+  margin: 0px 5px;
+  padding: 5px;
+  background: #E8CA4C;
+  border-radius: 10px;
+  font-size: small;
+  font-weight: bolder;
+}
+.Tarjeta .DetallesOperacion {
+  height: 100%;
+  width: 100%;
+  background: #B9B9B9;
+  border-radius: 10px 10px 0px 0px;
+  display: none;
+  flex-direction: row;
+  overflow: hidden;
+}
+.Tarjeta .DetallesOperacion .PartesFraccionDetalles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+  border-right: solid 2px black;
+  min-width: 126px;
+}
+.Tarjeta .DetallesOperacion .PartesFraccionDetalles span {
+  font-weight: bold;
+  margin: 5px;
+}
+.Tarjeta .DetallesOperacion .DetallesFraccionResult {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+.Tarjeta .DetallesOperacion .DetallesFraccionResult .Fracciones {
+  display: flex;
+  flex-direction: row;
+}
+.Tarjeta .DetallesOperacion .DetallesFraccionResult .Fracciones .DetallesFraccion {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+}
+.Tarjeta .DetallesOperacion .DetallesFraccionResult .Fracciones .DetallesFraccion .DetallesNumerador, .Tarjeta .DetallesOperacion .DetallesFraccionResult .Fracciones .DetallesFraccion .DetallesDenominador {
+  width: 50px;
+  height: 22px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  margin: 5px;
+  text-align: center;
+}
+.Tarjeta .DetallesOperacion .DetallesFraccionResult .Fracciones .DetallesFraccion .Line {
+  width: 100%;
+  height: 2px;
+  background: black;
+}
+.Tarjeta .DetallesOperacion .DetallesFraccionResult .Fracciones .DetallesFraccion span {
+  text-align: center;
+  font-weight: bolder;
+  margin: 5px 0px;
+}
+.Tarjeta button {
+  background: #E02342;
+  width: 100%;
+  border: 0px;
+  border-radius: 0px 0px 10px 10px;
+  height: 28px;
+  font-weight: bolder;
+}
+.Tarjeta button:hover {
+  background: #f14242;
+  cursor: pointer;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -30,261 +284,10 @@ input[type=number]::-webkit-outer-spin-button {
 body {
   height: 120vh;
 }
-body .menu {
-  background: #E5E5E5;
-  height: 100vh;
-  width: 300px;
-  position: fixed;
-  top: 60px;
-  z-index: 1;
-  box-shadow: 2px 0px 4px #B9B9B9;
-  user-select: none;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-body .menu .title {
-  margin: 20px 0px;
-  font-size: x-large;
-  font-weight: center;
-}
-body .menu .line {
-  width: 100%;
-  height: 3px;
-  background: #B9B9B9;
-}
-body .menu .DropMenu {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  cursor: pointer;
-}
-body .menu .DropMenu .BtnMenu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 20px;
-}
-body .menu .DropMenu .BtnMenu span {
-  display: flex;
-  justify-content: space-between;
-  font-size: large;
-  font-weight: 900;
-}
-body .menu .DropMenu .BtnMenu .Icon {
-  transition: 0.2s ease all;
-}
-body .menu .DropMenu .Open .Icon {
-  transition: 0.2s ease all;
-  transform: rotate(-90deg);
-}
-body .menu .DropMenu .BtnMenu:hover {
-  background: #B9B9B9;
-}
-body .menu .DropMenu .DropContent-close {
-  display: none;
-  flex-direction: column;
-}
-body .menu .DropMenu .DropContent-close span {
-  padding: 8px 30px;
-  width: 270;
-}
-body .menu .DropMenu .DropContent-open {
-  display: flex;
-  flex-direction: column;
-  height: 0px;
-  overflow: hidden;
-}
-body .menu .DropMenu .DropContent-open span {
-  padding: 8px 30px;
-  width: 270;
-}
 body .Panel {
   position: relative;
   width: 100%;
   height: 100%;
-}
-body .Panel .Tarjeta {
-  position: relative;
-  top: 132px;
-  left: 400px;
-  width: 600px;
-  background: #E5E5E5;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-body .Panel .Tarjeta .Tarjeta-title {
-  font-weight: bolder;
-  margin: 10px 0px;
-}
-body .Panel .Tarjeta .PanelOperacion {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-body .Panel .Tarjeta .PanelOperacion .PartesFraccion {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-body .Panel .Tarjeta .PanelOperacion .PartesFraccion span {
-  display: flex;
-  align-items: center;
-  height: 60px;
-  margin: 0px 20px;
-  font-weight: bolder;
-  font-style: italic;
-}
-body .Panel .Tarjeta .PanelOperacion .FraccionLine {
-  height: 2px;
-  width: 100%;
-  background: black;
-}
-body .Panel .Tarjeta .PanelOperacion .Fraccion {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-body .Panel .Tarjeta .PanelOperacion .Fraccion .DivInput {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body .Panel .Tarjeta .PanelOperacion .Fraccion .DivInput input {
-  height: 40px;
-  margin: 10px 0px;
-  border: 0;
-  outline: none;
-  border-radius: 10px;
-  box-shadow: 0px 0px 0px 0px rgba(241, 66, 66, 0);
-  transition: 0.2s ease all;
-  font-size: xx-large;
-  font-weight: bolder;
-  text-align: center;
-  width: 100px;
-}
-body .Panel .Tarjeta .PanelOperacion .Fraccion .DivInput input:focus {
-  box-shadow: 0px 0px 2px 4px #f14242;
-  transition: 0.2s ease all;
-}
-body .Panel .Tarjeta .PanelOperacion .Fraccion .DivInput i {
-  margin: 0px 0px 0px 10px;
-  width: 5px;
-  position: relative;
-}
-body .Panel .Tarjeta .PanelOperacion .SignoIqual {
-  font-weight: bolder;
-  font-size: xx-large;
-  display: flex;
-  text-align: center;
-  margin: 0px 30px;
-}
-body .Panel .Tarjeta .PanelOperacion .FraccionResult {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-body .Panel .Tarjeta .PanelOperacion .FraccionResult .NumeradorResult, body .Panel .Tarjeta .PanelOperacion .FraccionResult .DenominadorResult {
-  height: 40px;
-  margin: 10px 0px;
-  border-radius: 10px;
-  transition: 0.2s ease all;
-  font-size: xx-large;
-  font-weight: bolder;
-  text-align: center;
-  width: 100px;
-  background: #FFFFFF;
-  user-select: none;
-}
-body .Panel .Tarjeta .DivAlert {
-  display: none;
-  width: 100%;
-  margin: 10px 0px;
-}
-body .Panel .Tarjeta .DivAlert i {
-  margin: 0px 5px;
-}
-body .Panel .Tarjeta .DivAlert .Alert {
-  width: 100%;
-  margin: 0px 5px;
-  padding: 5px;
-  background: #E8CA4C;
-  border-radius: 10px;
-  font-size: small;
-  font-weight: bolder;
-}
-body .Panel .Tarjeta .DetallesOperacion {
-  height: 100%;
-  width: 100%;
-  background: #B9B9B9;
-  border-radius: 10px 10px 0px 0px;
-  display: flex;
-  flex-direction: row;
-}
-body .Panel .Tarjeta .DetallesOperacion .PartesFraccionDetalles {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 10px;
-  border-right: solid 2px black;
-  min-width: 126px;
-}
-body .Panel .Tarjeta .DetallesOperacion .PartesFraccionDetalles span {
-  font-weight: bold;
-  margin: 5px;
-}
-body .Panel .Tarjeta .DetallesOperacion .DetallesFraccionResult {
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
-}
-body .Panel .Tarjeta .DetallesOperacion .DetallesFraccionResult .Fracciones {
-  display: flex;
-  flex-direction: row;
-}
-body .Panel .Tarjeta .DetallesOperacion .DetallesFraccionResult .Fracciones .DetallesFraccion {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin: 10px;
-}
-body .Panel .Tarjeta .DetallesOperacion .DetallesFraccionResult .Fracciones .DetallesFraccion .DetallesNumerador, body .Panel .Tarjeta .DetallesOperacion .DetallesFraccionResult .Fracciones .DetallesFraccion .DetallesDenominador {
-  width: 50px;
-  height: 22px;
-  background: #FFFFFF;
-  border-radius: 10px;
-  margin: 5px;
-  text-align: center;
-}
-body .Panel .Tarjeta .DetallesOperacion .DetallesFraccionResult .Fracciones .DetallesFraccion .Line {
-  width: 100%;
-  height: 2px;
-  background: black;
-}
-body .Panel .Tarjeta .DetallesOperacion .DetallesFraccionResult .Fracciones .DetallesFraccion span {
-  text-align: center;
-  font-weight: bolder;
-  margin: 5px 0px;
-}
-body .Panel .Tarjeta button {
-  background: #E02342;
-  width: 100%;
-  border: 0px;
-  border-radius: 0px 0px 10px 10px;
-  height: 28px;
-  font-weight: bolder;
-}
-body .Panel .Tarjeta button:hover {
-  background: #f14242;
-  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.css.map */
