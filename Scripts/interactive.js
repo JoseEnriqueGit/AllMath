@@ -1,7 +1,6 @@
 // Consts
 const BtnMenu = document.querySelectorAll('.BtnMenu');
-const NumeradorResult = document.querySelector('.NumeradorResult');
-const DenominadorResult = document.querySelector('.DenominadorResult');
+
 const RESOLVER = document.getElementById('Resolver')
 
 
@@ -29,8 +28,13 @@ BtnMenu.forEach(BtnMenu => {
 
 function MostrarFraccionSimplificada(){
     // Aqui se toman los valores del los inputs Numerador y Denominador
-    const Numerador = document.getElementById('Numerador').value;
-    const Denominador = document.getElementById('Denominador').value;
+    let Numerador = document.getElementById('Numerador').value;
+    let Denominador = document.getElementById('Denominador').value;
+    // Aqui se muestra el resultado de la simplificacion
+    let NumeradorResult = document.querySelector('.NumeradorResult');
+    let DenominadorResult = document.querySelector('.DenominadorResult');
+    //Aqui se declara el div que muetra el proceso de simplificacion
+    let DetallesFraccion = document.querySelector('.Fracciones');
     // Alerts divs
     const DivAlert = document.querySelector('.DivAlert');
     const Alert = document.querySelector('.Alert');
@@ -39,18 +43,27 @@ function MostrarFraccionSimplificada(){
     // Condicionalles que validan que haiga un valor en los imputs numerador y Denominador
     if(Numerador == 0 && Denominador == 0){
         DivAlert.style.display = 'flex';
+        NumeradorResult.innerHTML = '';
+        DenominadorResult.innerHTML = '';
+        DetallesFraccion.innerHTML = '';
 
         Alert.innerHTML = '';
         Alert.innerHTML = '<i class="fas fa-exclamation-triangle"></i>SE REQUIERE UN NUMERADOR Y UN DENOMINADOR.';
     }
     else if(Numerador == 0){
         DivAlert.style.display = 'flex';
+        NumeradorResult.innerHTML = '';
+        DenominadorResult.innerHTML = '';
+        DetallesFraccion.innerHTML = '';
 
         Alert.innerHTML = '';
         Alert.innerHTML = '<i class="fas fa-exclamation-triangle"></i>SE REQUIERE UN NUMERADOR.';
     }
     else if(Denominador == 0){
         DivAlert.style.display = 'flex';
+        NumeradorResult.innerHTML = '';
+        DenominadorResult.innerHTML = '';
+        DetallesFraccion.innerHTML = '';
 
         Alert.innerHTML = '';
         Alert.innerHTML = '<i class="fas fa-exclamation-triangle"></i>SE REQUIERE UN DENOMINADOR.';
@@ -61,7 +74,6 @@ function MostrarFraccionSimplificada(){
 
         // Aqui se llama la fucion simplificar de math.js
         const {Nnumerador,Ndenominador,listNumeradores,listDenominadores,nPrimosUsados} = math.simplificar(Numerador, Denominador);
-        const DetallesFraccion = document.querySelector('.Fracciones');
         DetallesFraccion.innerHTML = "";
         
         // Condicional para saber si un numero es irreducible
