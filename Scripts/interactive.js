@@ -27,41 +27,45 @@ BtnMenu.forEach(BtnMenu => {
 // END
 
 
-function Mostrar(){
-    // Numeros de la fraccion
+function MostrarFraccionSimplificada(){
+    // Aqui se toman los valores del los inputs Numerador y Denominador
     const Numerador = document.getElementById('Numerador').value;
     const Denominador = document.getElementById('Denominador').value;
-    // Alerts
+    // Alerts divs
     const DivAlert = document.querySelector('.DivAlert');
     const Alert = document.querySelector('.Alert');
+    const Detalles = document.querySelector('.DetallesOperacion');
 
+    // Condicionalles que validan que haiga un valor en los imputs numerador y Denominador
     if(Numerador == 0 && Denominador == 0){
         DivAlert.style.display = 'flex';
 
         Alert.innerHTML = '';
-        Alert.innerHTML = 'SE REQUIERE UN NUMERADOR Y UN DENOMINADOR.';
+        Alert.innerHTML = '<i class="fas fa-exclamation-triangle"></i>SE REQUIERE UN NUMERADOR Y UN DENOMINADOR.';
     }
     else if(Numerador == 0){
         DivAlert.style.display = 'flex';
 
         Alert.innerHTML = '';
-        Alert.innerHTML = 'SE REQUIERE UN NUMERADOR.';
+        Alert.innerHTML = '<i class="fas fa-exclamation-triangle"></i>SE REQUIERE UN NUMERADOR.';
     }
     else if(Denominador == 0){
         DivAlert.style.display = 'flex';
 
         Alert.innerHTML = '';
-        Alert.innerHTML = 'SE REQUIERE UN DENOMINADOR.';
+        Alert.innerHTML = '<i class="fas fa-exclamation-triangle"></i>SE REQUIERE UN DENOMINADOR.';
     }
     else{
         DivAlert.style.display = 'none';
         Alert.innerHTML = '';
 
+        // Aqui se llama la fucion simplificar de math.js
         const {Nnumerador,Ndenominador,listNumeradores,listDenominadores,nPrimosUsados} = math.simplificar(Numerador, Denominador);
         const DetallesFraccion = document.querySelector('.Fracciones');
-    
         DetallesFraccion.innerHTML = "";
-        if (listNumeradores.length == 0){
+        
+        // Condicional para saber si un numero es irreducible
+        if(listNumeradores.length == 0){
             DetallesFraccion.innerHTML = "";
             DetallesFraccion.innerHTML = `<div class="DetallesFraccion"><div class="DetallesNumerador">` + Numerador + `</div>
             <div class="Line"></div>
@@ -73,7 +77,8 @@ function Mostrar(){
             <div class="DetallesDenominador">` + Denominador + `</div>
             <span>` + nPrimosUsados[0] + `</span></div>`;
         }
-    
+        
+        // Bucle para imprimir en pantalla la listas del proceso de reduccion
         for(let i = 0; i < listNumeradores.length; i++){
             nPrimosUsados.push('')
     
@@ -85,13 +90,13 @@ function Mostrar(){
         }
         NumeradorResult.innerHTML = Nnumerador;
         DenominadorResult.innerHTML = Ndenominador;
+        Detalles.style.display = 'flex';
+
     }
 }
 
+
+// Eventos
 RESOLVER.addEventListener('click', ()=>{
-    Mostrar();
+    MostrarFraccionSimplificada();
 })
-
-
-
-// console.log(math.simplificar(23, 7));
