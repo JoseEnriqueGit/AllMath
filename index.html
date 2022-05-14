@@ -8,84 +8,33 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/Style/index.css"/>
 </head>
-<body>
+<body class="body">
     <!-- Nav -->
     <nav><span>AllMath</span></nav>
 
-    <!-- Menu -->
-    <aside class="menu">
-        <span class="title">ASIGNATURA</span>
-        <div class="line"></div>
-        
-        <div class="DropMenu">
-            <div class="BtnMenu">
-                <span>Matematicas</span><div class="Icon"><i class="fas fa-angle-left"></i></div>
-            </div>
-            <div class="DropContent-open">
-                <span>Factorizacion</span>
-                <span>Division</span>
-                <span>Raiz</span>
-            </div>
-        </div>
-
-        <div class="DropMenu">
-            <div class="BtnMenu">
-                <span>Fisica</span><div class="Icon"><i class="fas fa-angle-left"></i></div>
-            </div>
-            <div class="DropContent-open">
-                <span>Alog</span>
-                <span>Alog</span>
-            </div>
-        </div>
-    </aside>
-
-    <main class="Panel">
-        <div class="Tarjeta">
-            <span class="Tarjeta-title">FRACCION</span>
-            <div class="PanelOperacion">
-                <div class="PartesFraccion">
-                    <span>NUMERADOR</span>
-                    <span>DENOMINADOR</span>
+    <main id="Panel" class="Panel">
+        <menu>
+            <div class="DropMenu">
+                <div class="BtnMenu">
+                    <span>Matematicas</span><div class="Icon"><i class="fas fa-angle-left"></i></div>
                 </div>
-                <div class="Fraccion">
-                    <div class="DivInput"><input id="Numerador" type="number" pattern="[\d]"></div>
-                    <div class="FraccionLine"></div>
-                    <div class="DivInput"><input id="Denominador" type="number" pattern="[\d]"></div>
-                </div>
-                <span class="SignoIqual">=</span>
-                <div class="FraccionResult">
-                    <div class="NumeradorResult"></div>
-                    <div class="FraccionLine"></div>
-                    <div class="DenominadorResult"></div>
+                <div class="DropContent-open">
+                    <a href="/Vistas/Simplificacion.html">Simplificacion</a>
+                    <a>Division</a>
                 </div>
             </div>
 
-            <div class="DivAlert">
-                <span class="Alert"><i class="fas fa-exclamation-triangle"></i></span>
-            </div>
-
-            <div class="DetallesOperacion">
-                <div class="PartesFraccionDetalles">
-                    <span>NUMERADOR</span>
-                    <span>DENOMINADOR</span>
-                    <span>NUMERO PRIMO</span>
+            <!-- <div class="DropMenu">
+                <div class="BtnMenu">
+                    <span>Matematicas</span><div class="Icon"><i class="fas fa-angle-left"></i></div>
                 </div>
-                <div class="DetallesFraccionResult">
-                    <div class="Fracciones">
-                        <!-- <div class="DetallesFraccion">
-                            <div class="DetallesNumerador">5</div>
-                            <div class="Line"></div>
-                            <div class="DetallesDenominador">5</div>
-                            <span>Irreducible</span>
-                        </div> -->
-                    </div>
+                <div class="DropContent-open">
+                    <span>Factorizacion</span>
+                    <span>Division</span>
+                    <span>Raiz</span>
                 </div>
-            </div>
-
-            <button id="Resolver">RESOLVER</button>
-            <!-- <div onclick="saludos()">hola</div> -->
-
-        </div>
+            </div> -->
+        </menu>
     </main>
 
     <!-- JS -->
