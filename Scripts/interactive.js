@@ -1,13 +1,10 @@
-// Consts
-const BtnMenu = document.querySelectorAll('.BtnMenu');
-
-const RESOLVER = document.getElementById('Resolver')
-
-
 // Imports
 import * as math from "./math.js";
 
+
+
 // Funcion de la interacion del menu
+const BtnMenu = document.querySelectorAll('.BtnMenu');
 BtnMenu.forEach(BtnMenu => {
     BtnMenu.addEventListener('click', ()=>{
         
@@ -24,7 +21,6 @@ BtnMenu.forEach(BtnMenu => {
     });
 })
 // END
-
 
 function MostrarFraccionSimplificada(){
     // Aqui se toman los valores del los inputs Numerador y Denominador
@@ -108,7 +104,11 @@ function MostrarFraccionSimplificada(){
 }
 
 
-// Eventos
-RESOLVER.addEventListener('click', ()=>{
-    MostrarFraccionSimplificada();
-})
+
+
+// Eventos Button
+const main = document.getElementById('Panel')
+if(main.className == 'Panel-Simplificacion'){
+    const RESOLVER = document.getElementById('Resolver')
+    RESOLVER.addEventListener('click', MostrarFraccionSimplificada);
+}
