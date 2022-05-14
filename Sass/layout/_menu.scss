@@ -1,41 +1,27 @@
-.menu{
-    background: $W;
-    height: 100vh;
-    width: 300px;
-    // display: block;
-    position: fixed;
-    top: 60px;
-    z-index: 1;
-    box-shadow: 2px 0px 4px #B9B9B9;
-    user-select: none;
+menu{
+    // background: aquamarine;
 
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    .title{
-        margin: 20px 0px;
-        font-size: x-large;
-        font-weight: center;
-    }
-    .line{
-        width: 100%;
-        height: 3px;
-        background: $Gr;
-    }
+    width: 750px;
+    height: 300px;
+    margin: 0px 10px;
 
     .DropMenu{
         width: 100%;
         display: flex;
         flex-direction: column;
         position: relative;
-        cursor: pointer;
         
         .BtnMenu{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 8px 20px;
+            padding: 20px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            // margin: 0px 0px 10px 0px;
+
+            color: $W;
+            background: $Red;
             
             span{
                 display: flex;
@@ -60,29 +46,39 @@
         }
         // Hover menu
         .BtnMenu:hover{
-            background: $Gr;
+            background: $Red;
         }
 
         // Estilos del contenido del menu cerrado
         .DropContent-close{
             display: none;
             flex-direction: column;
-
-            span{
-                padding: 8px 30px;
-                width: 270;
-            }
         }
         // Estilos del contenido del menu abierto
         .DropContent-open{
             display: flex;
+            align-items: center;
             flex-direction: column;
             height: 0px;
             overflow: hidden;
+            // background: $W;
+            border-radius: 10px;
+            margin: 5px 0px;
 
-            span{
+            a{
+                text-decoration: none;
+                color: black;
                 padding: 8px 30px;
-                width: 270;
+                width: 85%;
+                background: $W;
+                text-align: center;
+                margin: 5px 0px;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+
+            a:Hover{
+                background: $Gr;
             }
         }
 
