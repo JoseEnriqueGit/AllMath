@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500;600;700&display=swap");
 nav {
-  background: #E02342;
+  background: #E03131;
   width: 100%;
   height: 60px;
   display: flex;
@@ -12,13 +12,15 @@ nav {
   font-size: xx-large;
   position: fixed;
   z-index: 2;
-  box-shadow: 0px 3px 2px #B9B9B9;
+  box-shadow: 0px 3px 2px #adb5bd;
 }
 
 menu {
   width: 750px;
   height: 300px;
-  margin: 0px 10px;
+  margin: 10px 10px;
+  position: relative;
+  top: 130px;
 }
 menu .DropMenu {
   width: 100%;
@@ -33,8 +35,8 @@ menu .DropMenu .BtnMenu {
   padding: 20px 20px;
   border-radius: 10px;
   cursor: pointer;
-  color: #E5E5E5;
-  background: #E02342;
+  color: #F8F9FA;
+  background: #E03131;
 }
 menu .DropMenu .BtnMenu span {
   display: flex;
@@ -50,7 +52,7 @@ menu .DropMenu .Open .Icon {
   transform: rotate(-90deg);
 }
 menu .DropMenu .BtnMenu:hover {
-  background: #E02342;
+  background: #f03e3e;
 }
 menu .DropMenu .DropContent-close {
   display: none;
@@ -63,29 +65,33 @@ menu .DropMenu .DropContent-open {
   height: 0px;
   overflow: hidden;
   border-radius: 10px;
-  margin: 5px 0px;
+  margin: 10px 0px;
 }
 menu .DropMenu .DropContent-open a {
   text-decoration: none;
-  color: black;
+  color: #212529;
   padding: 8px 30px;
   width: 85%;
-  background: #E5E5E5;
+  background: #ced4da;
   text-align: center;
   margin: 5px 0px;
   border-radius: 10px;
   cursor: pointer;
+  transition: 0.2s ease all;
+  box-shadow: 0px 0px 0px 0px #adb5bd;
 }
 menu .DropMenu .DropContent-open a:Hover {
-  background: #B9B9B9;
+  background: #adb5bd;
+  box-shadow: 0px 2px 18px -3px #adb5bd;
+  transition: 0.2s ease all;
 }
 
 .Tarjeta {
-  position: relative;
-  top: 132px;
   width: 600px;
-  background: #E5E5E5;
+  background: #E9ECEF;
   border-radius: 10px;
+  box-shadow: 0px 10px 15px -3px #B9B9B9;
+  margin: 10px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -136,7 +142,7 @@ menu .DropMenu .DropContent-open a:Hover {
   border: 0;
   outline: none;
   border-radius: 10px;
-  box-shadow: 0px 0px 0px 0px rgba(241, 66, 66, 0);
+  box-shadow: 0px 0px 0px 0px #f03e3e;
   transition: 0.2s ease all;
   font-size: xx-large;
   font-weight: bolder;
@@ -144,7 +150,7 @@ menu .DropMenu .DropContent-open a:Hover {
   width: 100px;
 }
 .Tarjeta .PanelOperacion .Fraccion .DivInput input:focus {
-  box-shadow: 0px 0px 2px 4px #f14242;
+  box-shadow: 0px 0px 2px 4px #f03e3e;
   transition: 0.2s ease all;
 }
 .Tarjeta .PanelOperacion .Fraccion .DivInput i {
@@ -174,7 +180,7 @@ menu .DropMenu .DropContent-open a:Hover {
   font-weight: bolder;
   text-align: center;
   width: 100px;
-  background: #FFFFFF;
+  background: #dee2e6;
   user-select: none;
 }
 .Tarjeta .DivAlert {
@@ -199,7 +205,7 @@ menu .DropMenu .DropContent-open a:Hover {
 .Tarjeta .DetallesOperacion {
   height: 100%;
   width: 100%;
-  background: #B9B9B9;
+  background: #adb5bd;
   border-radius: 10px 10px 0px 0px;
   display: none;
   flex-direction: row;
@@ -252,7 +258,7 @@ menu .DropMenu .DropContent-open a:Hover {
   margin: 5px 0px;
 }
 .Tarjeta button {
-  background: #E02342;
+  background: #E03131;
   width: 100%;
   border: 0px;
   border-radius: 0px 0px 10px 10px;
@@ -260,7 +266,7 @@ menu .DropMenu .DropContent-open a:Hover {
   font-weight: bolder;
 }
 .Tarjeta button:hover {
-  background: #f14242;
+  background: #f03e3e;
   cursor: pointer;
 }
 
@@ -268,6 +274,7 @@ menu .DropMenu .DropContent-open a:Hover {
   margin: 0px;
   padding: 0px;
   font-family: "Roboto Mono", monospace;
+  color: #212529;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -278,25 +285,65 @@ input[type=number]::-webkit-outer-spin-button {
 
 body {
   height: 100vh;
+  background-color: #F8F9FA;
 }
 body .Panel {
-  height: 100vh;
   display: flex;
-  justify-content: center;
-  position: relative;
-  top: 220px;
-}
-body i {
-  color: #E5E5E5;
-  font-size: 30px;
-}
-body .Panel-Simplificacion {
-  height: 100vh;
-  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  bottom: 300px;
+  top: 70px;
+}
+body i {
+  color: #F8F9FA;
+  font-size: 30px;
+}
+body .Panel-Simplificacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 70px;
+}
+body .LocationBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 15px;
+  height: 50px;
+  min-width: 150px;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: #dee2e6;
+  box-shadow: 0px 3px 2px #adb5bd;
+}
+body .LocationBar .linkOn {
+  background-color: #E03131;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 0px 10px 0px 5px;
+}
+body .LocationBar i {
+  color: #212529;
+  margin: 0px 10px;
+  font-size: 20px;
+}
+body .LocationBar .linkOff {
+  text-decoration: none;
+  color: #212529;
+  background-color: #F8F9FA;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 0px 5px 0px 10px;
+  transition: 0.2s ease all;
+}
+body .LocationBar .linkOff:hover {
+  transition: 0.2s ease all;
+  cursor: pointer;
+  background-color: #E03131;
 }
 
 /*# sourceMappingURL=index.css.map */
