@@ -1,8 +1,6 @@
 // Imports
 import * as math from "./math.js";
 
-
-
 // Funcion de la interacion del menu
 const BtnMenu = document.querySelectorAll('.BtnMenu');
 BtnMenu.forEach(BtnMenu => {
@@ -17,12 +15,11 @@ BtnMenu.forEach(BtnMenu => {
             height = Menu.scrollHeight;
         }
         Menu.style.height = `${height}px`;
-
     });
 })
 // END
 
-function MostrarFraccionSimplificada(){
+function MostrarFraccionSimplificada(event){
     // Aqui se toman los valores del los inputs Numerador y Denominador
     let Numerador = document.getElementById('Numerador').value;
     let Denominador = document.getElementById('Denominador').value;
