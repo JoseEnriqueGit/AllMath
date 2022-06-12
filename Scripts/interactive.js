@@ -1,5 +1,6 @@
 // Imports
 import * as math from "./math.js";
+import * as estadistic from "./estadistic.js";
 
 // Funcion de la interacion del menu
 const BtnMenu = document.querySelectorAll('.BtnMenu');
@@ -100,12 +101,11 @@ function MostrarFraccionSimplificada(event){
     }
 }
 
-
-
-
 // Eventos Button
 const main = document.getElementById('Panel')
 if(main.className == 'Panel-Simplificacion'){
     const RESOLVER = document.getElementById('Resolver')
     RESOLVER.addEventListener('click', MostrarFraccionSimplificada);
 }
+
+
