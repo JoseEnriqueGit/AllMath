@@ -101,7 +101,7 @@ function MostrarFraccionSimplificada(event){
     }
 }
 
-// Eventos Button
+// Eventos Button para simplificar fraccion
 const main = document.getElementById('Panel')
 if(main.className == 'Panel-Simplificacion'){
     const RESOLVER = document.getElementById('Resolver')

@@ -8,13 +8,15 @@
 
 function Average(list){
     let Sum = 0;
+    let listLength = list.length;
     list.forEach(element =>{
-        Sum += element;
-    });
-    return Sum / list.length;
+       Sum += element;
+      });
+   let Total = Sum / listLength;
+   return {Sum, listLength, Total}
 //     // return Math.round(Sum / list.length);
 }
-// console.log(Average([5,7,6,4,3,8,7]));
+// console.log(Average([1,2,3,4,5]));
 
 export function Mediana(list){
    // Se organiza la lista de menor a mayor
@@ -58,4 +60,4 @@ function Moda(list){
 
    return {arrSet, repetidos, mayor, indices}
 }
-console.log(Moda([11,15,14,7,7,12,11,7,12,12,9,11]));
+// console.log(Moda([11,15,14,7,7,12,11,7,12,12,9,11]));
