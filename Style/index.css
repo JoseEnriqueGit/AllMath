@@ -142,8 +142,6 @@ menu .DropMenu .DropContent-open a:Hover {
   border: 0;
   outline: none;
   border-radius: 10px;
-  box-shadow: 0px 0px 0px 0px #f03e3e;
-  transition: 0.2s ease all;
   font-size: xx-large;
   font-weight: bolder;
   text-align: center;
@@ -257,17 +255,221 @@ menu .DropMenu .DropContent-open a:Hover {
   font-weight: bolder;
   margin: 5px 0px;
 }
-.Tarjeta button {
-  background: #E03131;
+
+.InputList {
   width: 100%;
-  border: 0px;
-  border-radius: 0px 0px 10px 10px;
-  height: 28px;
-  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.Tarjeta button:hover {
-  background: #f03e3e;
-  cursor: pointer;
+.InputList label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.InputList label textarea {
+  padding: 10px;
+  font-size: medium;
+  font-weight: 600;
+  resize: none;
+  outline: none;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px 0px #f03e3e;
+  transition: 0.2s ease all;
+}
+.InputList label textarea:focus {
+  box-shadow: 0px 0px 2px 4px #f03e3e;
+  transition: 0.2s ease all;
+}
+
+.OutPut {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0px;
+  gap: 60px;
+}
+.OutPut div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.OutPut div span {
+  font-size: large;
+  font-weight: bold;
+}
+.OutPut div div {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  margin: 10px 0px;
+  border-radius: 10px;
+  font-size: x-large;
+  font-weight: bolder;
+  text-align: center;
+  width: 100px;
+  background: #F8F9FA;
+  user-select: none;
+  overflow: auto;
+  overflow-y: hidden;
+  scrollbar-width: 5px;
+}
+
+.DetallesOpMMM {
+  width: 100%;
+  height: 100%;
+  background: #adb5bd;
+  border-radius: 10px 10px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.DetallesOpMMM .DetallesMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 0px;
+  gap: 10px;
+}
+.DetallesOpMMM .DetallesMedia span {
+  font-weight: bold;
+}
+.DetallesOpMMM .DetallesMedia .DivSum {
+  background-color: #F8F9FA;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.DetallesOpMMM .DetallesMedia .DivisionOp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.DetallesOpMMM .DetallesMedia .DivisionOp .Division .Numerador, .DetallesOpMMM .DetallesMedia .DivisionOp .Division .Denominador {
+  width: 50px;
+  height: 22px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  margin: 5px;
+  text-align: center;
+}
+.DetallesOpMMM .DetallesMedia .DivisionOp .Division .Line {
+  width: 100%;
+  height: 2px;
+  background: black;
+}
+.DetallesOpMMM .DetallesMedia .DivisionOp .SignoIqual {
+  text-align: center;
+  font-weight: bolder;
+  margin: 5px 0px;
+  font-size: large;
+}
+.DetallesOpMMM .DetallesMedia .DivisionOp .ResultDivision {
+  width: 50px;
+  height: 22px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  margin: 5px;
+  text-align: center;
+}
+.DetallesOpMMM .DetallesMediana {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 0px;
+  gap: 10px;
+}
+.DetallesOpMMM .DetallesMediana span {
+  font-weight: bold;
+}
+.DetallesOpMMM .DetallesMediana .DisplayMediana {
+  background-color: #F8F9FA;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.DetallesOpMMM .DetallesMediana .DisplayMediana span {
+  color: #f03e3e;
+}
+.DetallesOpMMM .DetallesMediana .DivSum {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.DetallesOpMMM .DetallesMediana .DivSum .Sum {
+  height: 22px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 0px 10px;
+  text-align: center;
+}
+.DetallesOpMMM .DetallesMediana .DivSum .SumResult {
+  width: 50px;
+  height: 22px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  margin: 5px;
+  text-align: center;
+}
+.DetallesOpMMM .DetallesMediana .DivisionOp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.DetallesOpMMM .DetallesMediana .DivisionOp .Division .Numerador, .DetallesOpMMM .DetallesMediana .DivisionOp .Division .Denominador {
+  width: 50px;
+  height: 22px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  margin: 5px;
+  text-align: center;
+}
+.DetallesOpMMM .DetallesMediana .DivisionOp .Division .Line {
+  width: 100%;
+  height: 2px;
+  background: black;
+}
+.DetallesOpMMM .DetallesMediana .DivisionOp .SignoIqual {
+  text-align: center;
+  font-weight: bolder;
+  margin: 5px 0px;
+  font-size: large;
+}
+.DetallesOpMMM .DetallesMediana .DivisionOp .ResultDivision {
+  width: 50px;
+  height: 22px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  margin: 5px;
+  text-align: center;
+}
+.DetallesOpMMM .DetallesModa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 0px;
+  gap: 10px;
+}
+.DetallesOpMMM .DetallesModa span {
+  font-weight: bold;
+}
+.DetallesOpMMM .DetallesModa .DisplayModa {
+  background-color: #F8F9FA;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.DetallesOpMMM .DetallesModa .DisplayModa span {
+  color: #f03e3e;
 }
 
 * {
@@ -344,6 +546,20 @@ body .LocationBar .linkOff:hover {
   transition: 0.2s ease all;
   cursor: pointer;
   background-color: #E03131;
+}
+
+.BtnResolver {
+  background: #E03131;
+  width: 100%;
+  border: 0px;
+  border-radius: 0px 0px 10px 10px;
+  height: 28px;
+  font-weight: bolder;
+}
+
+.BtnResolver:hover {
+  background: #f03e3e;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllMath</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/Style/index.css"/>
+</head>
+<body id="body" class="id">
+    <!-- Nav -->
+    <nav><span>AllMath</span></nav>
+
+    <main id="Panel" class="Panel">
+        <div class="LocationBar">
+            <a href="/index.html" class="linkOff">HOME</a>
+            <i class="fas fa-angle-right"></i>
+            <a class="linkOn">Media, Mediana y Moda</a>
+        </div>
+
+        <div class="Tarjeta">
+            <span class="Tarjeta-title">Media, Mediana y Moda</span>
+            <div class="InputList">
+                <label>Ingresa tu lista de numeros: 
+                    <textarea name="textarea" rows="5" cols="50"></textarea>
+                </label>
+            </div>
+            <div class="OutPut">
+                <div class="DivMedia">
+                    <span>Media</span>
+                    <div>3</div>
+                </div>
+                <div class="DivMediana">
+                    <span>Mediana</span>
+                    <div>3</div>
+                </div>
+                <div class="DivModa">
+                    <span>Moda</span>
+                    <div>3</div>
+                </div>
+            </div>
+
+            <div class="DetallesOpMMM">
+                <div class="DetallesMedia">
+                    <span>Media</span>
+                    <div class="DivSum">1 + 2 + 3 + 4 + 5 = 15</div>
+                    <div class="DivisionOp">
+                        <div class="Division">
+                            <div class="Numerador">5</div>
+                            <div class="Line"></div>
+                            <div class="Denominador">5</div>
+                        </div>
+                        <span class="SignoIqual">=</span>
+                        <div class="ResultDivision">3</div>
+                    </div>
+                </div>
+
+                <div class="DetallesMediana">
+                    <span>Mediana</span>
+                    <div class="DisplayMediana">1, 2, <span>3</span>, 4, 5</div>
+
+                    <div class="DivSum">
+                        <div class="Sum">3 + 3</div>
+                        <span class="SignoIqual">=</span>
+                        <div class="SumResult">6</div>
+                    </div>
+
+                    <div class="DivisionOp">
+                        <div class="Division">
+                            <div class="Numerador">5</div>
+                            <div class="Line"></div>
+                            <div class="Denominador">5</div>
+                        </div>
+                        <span class="SignoIqual">=</span>
+                        <div class="ResultDivision">3</div>
+                    </div>
+                </div>
+
+                <div class="DetallesModa">
+                    <span>Moda</span>
+                    <div class="DisplayModa">1, 2, <span>3</span>, <span>3</span>, 4, 5</div>
+                </div>
+            </div>
+            <button class="BtnResolver" id="Resolver">RESOLVER</button>
+        </div>
+
+    </main>
+
+    <!-- JS -->
+    <script src="/Scripts/interactive.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/0d9a9d95d8.js" crossorigin="anonymous"></script>
+</body>
+</html>

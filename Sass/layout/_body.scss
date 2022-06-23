@@ -1,5 +1,5 @@
 @import'Tarjetas/fraccion';
-
+@import'Tarjetas/MMM';
 
 *{
     margin: 0px;
@@ -85,4 +85,17 @@ body{
         }
         
     }
+}
+
+.BtnResolver{
+    background: $Pri;
+    width: 100%;
+    border: 0px;
+    border-radius: 0px 0px 10px 10px;
+    height: 28px;
+    font-weight: bolder;
+}
+.BtnResolver:hover{
+    background: $Red7;
+    cursor: pointer;
 }
