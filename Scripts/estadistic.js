@@ -1,12 +1,4 @@
-// let lista = '10, 10, 2, 2, 2, 1, 3, 4, 4, 4, 10, 2, 1, 1, 4, 1'.split(',');
-// let array = [10,10];
-// lista.forEach(element => {
-//     array.push(Number(element));
-// });
-// console.log(lista);
-// console.log(array);
-
-function Average(list){
+export function Average(list){
     let Sum = 0;
     let listLength = list.length;
     list.forEach(element =>{
@@ -27,15 +19,22 @@ export function Mediana(list){
     con el length de la lista dividido entre dos y restadole uno, y luego tomo en segundo con el length de la lista 
     dividido entre dos y luego esos dos datos los divido entre dos.*/
      if((organized.length % 2) == 0){
-        return (organized[organized.length / 2 - 1] + organized[organized.length / 2]) / 2;
+      //   return (organized[organized.length / 2 - 1] + organized[organized.length / 2]) / 2;
+      let firstIndice = organized.length / 2 - 1;
+      let secondIndice = organized.length / 2;
+      let sumIndex = organized[firstIndice] + organized[secondIndice];
+        let mediana = (organized[organized.length / 2 - 1] + organized[organized.length / 2]) / 2;
+        return {organized, mediana, firstIndice, secondIndice, sumIndex};
      }
      else{
-        return organized[Math.round((organized.length / 2) - 1)];
+        let indice = Math.round((organized.length / 2) - 1);
+        let mediana = organized[Math.round((organized.length / 2) - 1)];
+        return {organized, mediana, indice};
      }
 }
-// console.log(Mediana([1,2,3,4,5]));
+// console.log(Mediana([1, 1, 1, 2, 2, 5, 5, 23, 23, 23, 23, 23, 34, 52, 88]));
 
-function Moda(list){
+export function Moda(list){
    // Convertimos la lista en un cojunto
    let arrSet = Array.from(new Set(list));
    // En repetidos guardo la cantidad de vece que se repite el numero de la lista Set.
@@ -57,7 +56,21 @@ function Moda(list){
      indices.push(idx);
      idx = repetidos.indexOf(mayor, idx + 1);
    }
+   let moda = [];
+   indices.forEach(indices =>{
+      moda.push(arrSet[indices])
+  });
 
-   return {arrSet, repetidos, mayor, indices}
+  let indexModa = [];
+
+  for(let x = 0; x < moda.length; x++){
+   var idy = list.indexOf(moda[x]);
+   while (idy != -1) {
+      indexModa.push(idy);
+       idy = list.indexOf(moda[x], idy + 1);
+     }
 }
-// console.log(Moda([11,15,14,7,7,12,11,7,12,12,9,11]));
+
+   return {arrSet, repetidos, mayor, indices, moda, indexModa}
+}
+// console.log(Moda([1,1,1,2,3,4,3,5,3]));
