@@ -37,9 +37,7 @@
             }
         }
         .FraccionLine{
-            height: 2px;
-            width: 100%;
-            background: black;
+            @include DiviLine()
         }
 
         .Fraccion{
@@ -61,8 +59,6 @@
                     border: 0;
                     outline: none;
                     border-radius: 10px;
-                    
-                    
 
                     font-size: xx-large;
                     font-weight: bolder;
@@ -105,19 +101,7 @@
             align-items: center;
 
             .NumeradorResult, .DenominadorResult{
-                height: 40px;
-                margin: 10px 0px;
-
-                border-radius: 10px;
-                transition: 0.2s ease all;
-
-                font-size: xx-large;
-                font-weight: bolder;
-                text-align: center;
-
-                width: 100px;
-                background: $Gr3;
-                user-select: none;
+                @include OutputSquare1($Bg: $Gr3);
             }
         }
     }
@@ -188,17 +172,10 @@
                     margin: 10px;
 
                     .DetallesNumerador, .DetallesDenominador{
-                        width: 50px;
-                        height: 22px;
-                        background: #FFFFFF;
-                        border-radius: 10px;
-                        margin: 5px;
-                        text-align: center;
+                        @include OutputSquare2()
                     }
                     .Line{
-                        width: 100%;
-                        height: 2px;
-                        background: black;
+                        @include DiviLine()
                     }
                     span{
                         text-align: center;

@@ -1,5 +1,6 @@
 @import'Tarjetas/fraccion';
 @import'Tarjetas/MMM';
+// @forward 'Tarjetas/MMM';
 
 *{
     margin: 0px;
@@ -97,5 +98,4 @@ body{
 }
 .BtnResolver:hover{
     background: $Red7;
-    cursor: pointer;
 }

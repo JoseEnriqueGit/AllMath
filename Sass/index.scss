@@ -2,4 +2,5 @@
 @import 'var/mixins';
 @import 'layout/nav';
 @import'layout/menu';
-@import'layout/body';
+@import 'layout/global';
+// @forward 'layout/global';
