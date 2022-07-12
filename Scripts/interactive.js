@@ -150,6 +150,7 @@ function MMM(event){
     let DisplayMedia = document.getElementById('DisplayMedia');
     let DisplayMediana = document.getElementById('DisplayMediana');
     let DisplayModa = document.getElementById('DisplayModa');
+    let DetallesOpMMM = document.getElementById('DetallesOpMMM');
 
     let InputList = document.getElementById('InputList').value;
     let numberList = [];
@@ -158,25 +159,28 @@ function MMM(event){
     const Alert = document.querySelector('.Alert');
 
     InputList = InputList.replaceAll(/[:;-\s]/g, ',');
-    // console.log(InputList);
     
     if(InputList.search(/[*+\¿?^${}()|[\]\\¡!_=<>&%@~`]/g) != -1){
         DivAlert.style.display = 'flex';
         Alert.innerHTML = '';
         Alert.innerHTML = '<i class="fas fa-exclamation-triangle"></i>SE REQUIERE UNA LISTA DE NUMEROS SIN CARACTERES RAROS.';
+        DetallesOpMMM.style.display = 'none';
     }
     else if(InputList.search(/[A-Z]/ig) != -1){
         DivAlert.style.display = 'flex';
         Alert.innerHTML = '';
         Alert.innerHTML = '<i class="fas fa-exclamation-triangle"></i>SE REQUIERE UNA LISTA DE NUMEROS SIN LETRAS.';
+        DetallesOpMMM.style.display = 'none';
     }
     else if(InputList.length == 0){
         DivAlert.style.display = 'flex';
         Alert.innerHTML = '';
         Alert.innerHTML = '<i class="fas fa-exclamation-triangle"></i>SE REQUIERE UNA LISTA DE NUMEROS.';
+        DetallesOpMMM.style.display = 'none';
     }
     else{
         DivAlert.style.display = 'none';
+        DetallesOpMMM.style.display = 'flex';
         Alert.innerHTML = '';
 
         InputList = InputList.split(",");
