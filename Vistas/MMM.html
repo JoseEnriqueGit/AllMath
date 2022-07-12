@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AllMath</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="/Style/index.css"/>
+    <link rel="stylesheet" href="/Styles/index.css"/>
 </head>
 <body id="body" class="id">
     <!-- Nav -->
@@ -23,63 +23,62 @@
             <span class="Tarjeta-title">Media, Mediana y Moda</span>
             <div class="InputList">
                 <label>Ingresa tu lista de numeros: 
-                    <textarea name="textarea" rows="5" cols="50"></textarea>
+                    <textarea id="InputList" name="textarea" rows="5" cols="50"></textarea>
                 </label>
             </div>
             <div class="OutPut">
                 <div class="DivMedia">
                     <span>Media</span>
-                    <div>3</div>
+                    <div id="DisplayMedia"></div>
                 </div>
                 <div class="DivMediana">
                     <span>Mediana</span>
-                    <div>3</div>
+                    <div id="DisplayMediana"></div>
                 </div>
                 <div class="DivModa">
                     <span>Moda</span>
-                    <div>3</div>
+                    <div id="DisplayModa"></div>
                 </div>
             </div>
 
-            <div class="DetallesOpMMM">
+            <div class="DivAlert">
+                <span class="Alert"><i class="fas fa-exclamation-triangle"></i></span>
+            </div>
+
+            <div id="DetallesOpMMM" class="DetallesOpMMM">
                 <div class="DetallesMedia">
                     <span>Media</span>
-                    <div class="DivSum">1 + 2 + 3 + 4 + 5 = 15</div>
+                    <div class="DivSum"><span class="FontRed"></span></div>
                     <div class="DivisionOp">
                         <div class="Division">
-                            <div class="Numerador">5</div>
+                            <div id="NumeradorMedia" class="Numerador"></div>
                             <div class="Line"></div>
-                            <div class="Denominador">5</div>
+                            <div id="DenominadorMedia" class="Numerador"></div>
                         </div>
                         <span class="SignoIqual">=</span>
-                        <div class="ResultDivision">3</div>
+                        <div id="ResultDivisionMedia" class="ResultDivision"></div>
                     </div>
                 </div>
 
                 <div class="DetallesMediana">
                     <span>Mediana</span>
-                    <div class="DisplayMediana">1, 2, <span>3</span>, 4, 5</div>
+                    <div id="DisplayMedianaDetalles" class="DisplayMediana"></div>
 
-                    <div class="DivSum">
-                        <div class="Sum">3 + 3</div>
+                    <div id="DivSumMediana" class="DivSum">
+                        <div id="SumMediana" class="Sum"></div>
                         <span class="SignoIqual">=</span>
-                        <div class="SumResult">6</div>
+                        <div id="SumResult" class="SumResult"></div>
                     </div>
 
-                    <div class="DivisionOp">
+                    <div id="DivisionOpMediana" class="DivisionOp">
                         <div class="Division">
-                            <div class="Numerador">5</div>
+                            <div id="NumeradorMediana" class="Numerador"></div>
                             <div class="Line"></div>
-                            <div class="Denominador">5</div>
+                            <div id="DenominadorMediana" class="Denominador">2</div>
                         </div>
                         <span class="SignoIqual">=</span>
-                        <div class="ResultDivision">3</div>
+                        <div id="ResultDivisionMediana" class="ResultDivision"><span class="FontRed"></span></div>
                     </div>
-                </div>
-
-                <div class="DetallesModa">
-                    <span>Moda</span>
-                    <div class="DisplayModa">1, 2, <span>3</span>, <span>3</span>, 4, 5</div>
                 </div>
             </div>
             <button class="BtnResolver" id="Resolver">RESOLVER</button>
