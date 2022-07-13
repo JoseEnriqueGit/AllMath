@@ -37,6 +37,7 @@ function MostrarFraccionSimplificada(event){
     // Condicionalles que validan que haiga un valor en los imputs numerador y Denominador
     if(Numerador == 0 && Denominador == 0){
         DivAlert.style.display = 'flex';
+        Detalles.style.display = 'none';
         NumeradorResult.innerHTML = '';
         DenominadorResult.innerHTML = '';
         DetallesFraccion.innerHTML = '';
@@ -46,6 +47,7 @@ function MostrarFraccionSimplificada(event){
     }
     else if(Numerador == 0){
         DivAlert.style.display = 'flex';
+        Detalles.style.display = 'none';
         NumeradorResult.innerHTML = '';
         DenominadorResult.innerHTML = '';
         DetallesFraccion.innerHTML = '';
@@ -55,6 +57,7 @@ function MostrarFraccionSimplificada(event){
     }
     else if(Denominador == 0){
         DivAlert.style.display = 'flex';
+        Detalles.style.display = 'none';
         NumeradorResult.innerHTML = '';
         DenominadorResult.innerHTML = '';
         DetallesFraccion.innerHTML = '';
