@@ -1,5 +1,6 @@
 menu{
     width: 750px;
+    // width: 60%;
     height: 300px;
     margin: 10px 10px;
     position: relative;
@@ -87,3 +88,5 @@ menu{
 
     }
 }
+
+@import '../query/menuQuery';
