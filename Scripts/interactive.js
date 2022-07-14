@@ -238,14 +238,16 @@ function MMM(event){
 
     // console.log(InputList);
 }
-const RESOLVER = document.getElementById('Resolver');
-RESOLVER.addEventListener('click', MMM);
 
 // Eventos Button para simplificar fraccion
 const main = document.getElementById('Panel')
 if(main.className == 'Panel-Simplificacion'){
     const RESOLVER = document.getElementById('Resolver');
-    RESOLVER.addEventListener('click', MostrarFraccionSimplificada);
+    RESOLVER.addEventListener('click', MostrarFraccionSimplificada)
+}
+else if(main.className == 'Panel-MMM'){
+    const RESOLVER = document.getElementById('Resolver');
+    RESOLVER.addEventListener('click', MMM)
 }
 
 
