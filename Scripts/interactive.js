@@ -243,11 +243,21 @@ function MMM(event){
 const main = document.getElementById('Panel')
 if(main.className == 'Panel-Simplificacion'){
     const RESOLVER = document.getElementById('Resolver');
-    RESOLVER.addEventListener('click', MostrarFraccionSimplificada)
+    RESOLVER.addEventListener('click', MostrarFraccionSimplificada);
+    document.addEventListener('keydown', (event) => {
+        if (event.keyCode == 13){
+            MostrarFraccionSimplificada();
+        }
+      });
 }
 else if(main.className == 'Panel-MMM'){
     const RESOLVER = document.getElementById('Resolver');
-    RESOLVER.addEventListener('click', MMM)
+    RESOLVER.addEventListener('click', MMM);
+    document.addEventListener('keydown', (event) => {
+        if (event.keyCode == 13){
+            MostrarFraccionSimplificada();
+        }
+      });
 }
 
 
