@@ -255,7 +255,7 @@ else if(main.className == 'Panel-MMM'){
     RESOLVER.addEventListener('click', MMM);
     document.addEventListener('keydown', (event) => {
         if (event.keyCode == 13){
-            MostrarFraccionSimplificada();
+            MMM();
         }
       });
 }
