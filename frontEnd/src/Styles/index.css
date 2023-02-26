@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  @apply flex flex-col min-h-screen w-full bg-slate-900 text-slate-100 font-mono
+  
+}
+.App{
+  @apply flex justify-center items-center min-h-screen w-full
+}
+
+p{
+  @apply text-3xl font-bold underline text-red-600
+}
