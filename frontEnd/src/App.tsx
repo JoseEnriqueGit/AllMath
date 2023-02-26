@@ -1,16 +1,20 @@
-import { useState } from "react";
-import "./App.css";
+// Import
+import { Routes, Route } from "react-router-dom";
+// Styles
+import "./Styles/index.css";
+// Component
+import { Home } from "./Pages";
 
-function App() {
-  const [count, setCount] = useState(0);
-
+const App = () => {
   return (
-    <div className="App">
-      <p className="">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <main className="App">
+      <Routes>
+        <Route index element={<Home />} />
+        {/* <Route path='/Modificar' element={<MultiStepsModifyCitation />} /> */}
+        {/* <Route path='/CancelarCita' element={<CancelForm />} /> */}
+      </Routes>
+    </main>
   );
-}
+};
 
 export default App;
