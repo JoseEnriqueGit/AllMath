@@ -1,1 +1,1 @@
-export * from './SimplifyingFractions';
+export { default as SimplifyingFractions } from './SimplifyingFractions';
