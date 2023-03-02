@@ -1,16 +1,17 @@
 // imports
 // Component
-import { CardLink, SearchInput } from "./components";
+import { Tiltle, SearchInput } from "../../UI";
+import { CardLink } from "./components";
 
 const Home = (): JSX.Element => {
   return (
-    <article className="grid grid-cols-HomeGrid  w-800 gap-6 m-6">
-      <span className="col-span-full text-4xl font-bold">AllMath</span>
+    <article className="ArticleContainer">
+      <Tiltle />
       <SearchInput />
-      <CardLink text="Simplifying Fractions" to="#"/>
-      
+      <CardLink text="Simplifying Fractions" to="/SimplifyingFractions" />
+      <CardLink text="Simplifying Fractions" to="#" />
     </article>
   );
-}
+};
 
 export default Home;
