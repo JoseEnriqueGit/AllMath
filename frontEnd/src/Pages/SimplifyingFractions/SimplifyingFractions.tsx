@@ -1,8 +1,12 @@
-function SimplifyingFractions() {
+// Componet
+import { Tiltle, SearchInput } from "../../UI";
+
+function SimplifyingFractions(): JSX.Element {
   return (
-    <div className="App">
-      <p className="">Click on the Vite and React logos to learn more</p>
-    </div>
+    <article className="ArticleContainer">
+      <Tiltle />
+      <SearchInput />
+    </article>
   );
 }
 
