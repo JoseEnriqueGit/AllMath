@@ -1,0 +1,22 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Como funciona el handleResize",
+  "steps": [
+    {
+      "file": "frontEnd/src/Pages/SimplifyingFractions/SimplifyingFractions.tsx",
+      "description": "This useEffect is for see if the size of the change, in this case 530px, if the window size is over 530px, the component title of the section appear.",
+      "line": 8
+    },
+    {
+      "file": "frontEnd/src/Pages/SimplifyingFractions/SimplifyingFractions.tsx",
+      "description": "window.addEventListener('resize', handleResize)\r\nAdd de event type resize, and then call the function handleResize, this function validate if the screen is up to 530px.",
+      "line": 13
+    },
+    {
+      "file": "frontEnd/src/Pages/SimplifyingFractions/SimplifyingFractions.tsx",
+      "description": "At the end remove the event.",
+      "line": 15
+    }
+  ],
+  "ref": "update"
+}
