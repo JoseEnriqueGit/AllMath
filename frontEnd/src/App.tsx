@@ -3,14 +3,14 @@ import { Routes, Route } from "react-router-dom";
 // Styles
 import "./Styles/index.css";
 // Component
-import { Home } from "./Pages";
+import { Home, SimplifyingFractions } from "./Pages";
 
 const App = () => {
   return (
     <main className="App">
       <Routes>
         <Route index element={<Home />} />
-        {/* <Route path='/Modificar' element={<MultiStepsModifyCitation />} /> */}
+        <Route path='/SimplifyingFractions' element={<SimplifyingFractions />} />
         {/* <Route path='/CancelarCita' element={<CancelForm />} /> */}
       </Routes>
     </main>
