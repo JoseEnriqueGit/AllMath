@@ -7,6 +7,10 @@ module.exports = {
       width: {
         "800": "800px"
       },
+      maxWidth: {
+        "900": "900px",
+        "800": "800px"
+      },
       gridTemplateColumns: {
         'HomeGrid': "repeat(auto-fit, minmax(300px, 1fr))",
         // Simple 16 column grid
