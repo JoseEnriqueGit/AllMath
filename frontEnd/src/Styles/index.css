@@ -14,12 +14,8 @@ body{
   font-family: 'Space Mono', monospace;
   
 }
-.App{
-  @apply flex justify-center items-center min-h-screen w-full
-}
-
 .ArticleContainer{
-  @apply grid grid-cols-HomeGrid w-800 gap-6 m-6
+  @apply grid grid-cols-HomeGrid w-800 gap-6 my-6
 }
 .InputNumberFractions{
   @apply text-gray-600 h-10 w-24 outline-0 px-2 rounded-md text-3xl font-bold text-center
