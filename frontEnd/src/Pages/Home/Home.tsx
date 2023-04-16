@@ -1,8 +1,8 @@
 import { useState } from "react";
+import SearchComponentsList from "./components/SearchInput/SearchComponentsList.json";
 // Components
 import { Tiltle, SearchInput } from "../../UI";
 import { CardLink } from "./components";
-import SearchComponentsList from "./components/SearchInput/SearchComponentsList.json";
 
 interface ISearchComponentsList {
   id: number;
