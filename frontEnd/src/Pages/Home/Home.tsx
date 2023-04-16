@@ -1,60 +1,48 @@
-// imports
-import Fuse from "fuse.js";
-import SearchComponentsList from "../../UI/SearchInput/SearchComponentsList.json";
 import { useState } from "react";
-// Component
-import { Tiltle, SearchInput, SearchIcon } from "../../UI";
+// Components
+import { Tiltle, SearchInput } from "../../UI";
 import { CardLink } from "./components";
-// import { SearchComponentsList } from "../../UI/SearchInput/SearchComponentsList";
+import SearchComponentsList from "./components/SearchInput/SearchComponentsList.json";
+
+interface ISearchComponentsList {
+  id: number;
+  value: string;
+  label: string;
+}
+
+const RenderList = ({ list }: { list: ISearchComponentsList[] }) => (
+  <>
+    {list.map((item: ISearchComponentsList) => (
+      <CardLink key={item.id} text={item.label} to={item.value} />
+    ))}
+  </>
+);
 
 const Home = (): JSX.Element => {
-  const [searchResult, setSearchResult] = useState({});
-  const options = {
-    keys: ["value", "label"],
-  };
-  const fuse = new Fuse(SearchComponentsList, options);
-
-  function handleSearchComponent(e: React.ChangeEvent<HTMLInputElement>) {
-    e.preventDefault();
-
-    const result = fuse.search(e.target.value);
-    setSearchResult(result);
-
-
-
-    console.log(JSON.parse(result));
-  }
-  // console.log(searchResult);
+  const [query, setQuery] = useState("");
+  const [results, setResults] = useState<ISearchComponentsList[]>([]);
 
   return (
-    <article className="ArticleContainer">
-      <Tiltle />
-      {/* Input Search */}
-      <label htmlFor="Search" className="flex col-span-full flex-row">
-        <div className="flex justify-center items-center bg-slate-600 rounded-l-xl px-6">
-          <SearchIcon fill="#F8FAFC" width={32} height={32} />
-        </div>
-        <input
-          id="Search"
-          type="search"
-          className="bg-slate-600 w-full rounded-r-xl p-5 text-3xl font-semibold outline-none"
-          autoComplete="off"
-          autoCorrect="off"
-          onChange={handleSearchComponent}
+    <article className="flex justify-center flex-col w-full gap-6 my-6">
+      <section className="flex justify-center items-center flex-col w-full gap-6">
+        <Tiltle />
+        <SearchInput
+          query={query}
+          setQuery={setQuery}
+          setResults={setResults}
         />
-      </label>
-      {/* Card links */}
-      {/* {
-        Object.values(searchResult).map((elemento: any) => {
-          return (
-            <span></span>
-          )
-        });
-      } */}
-      {/* <CardLink text="Simplifying Fractions" to="/SimplifyingFractions" />
-      <CardLink text="Simplifying Fractions" to="#" /> */}
+      </section>
+      <section className="grid grid-cols-HomeGrid gap-6">
+        {query.trim().length === 0 && <RenderList list={SearchComponentsList} />}
+        {query.trim().length !== 0 && results.length > 0 && (
+          <RenderList list={results} />
+        )}
+        {query.trim().length !== 0 && results.length === 0 && (
+          <p className="text-center text-gray-500">No hay resultados</p>
+        )}
+      </section>
     </article>
   );
 };
-``;
+
 export default Home;
